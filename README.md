@@ -38,110 +38,149 @@
 
 ```yaml
 guidelines:
-  immutable-data-model:
-    id: "8"
+  - id: "8"
     title: "イミュータブルデータモデル設計ガイドライン"
-    core-principle: "UPDATE（更新）がシステムを最も複雑化する"
-    when-to-use:
-      - "テーブルの更新可否を判断する時"
+    category: "design-principle"
+    author: null
+    when_to_use:
+      - "データモデル設計の基本方針を決める時"
       - "データの変更履歴を管理する必要がある時"
       - "システムの複雑さを削減したい時"
+    core_principle: "UPDATE（更新）がシステムを最も複雑化する"
+    key_concepts:
+      - "事実の不変性"
+      - "単一責任"
+      - "複雑さの可視化"
     
-  entity-classification:
-    id: "9"
+  - id: "9"
     title: "エンティティ分類の手引き"
-    when-to-use:
-      - "エンティティの種類（リソース/イベント）を判別する時"
+    category: "entity-design"
+    author: null
+    when_to_use:
+      - "エンティティの種類や役割を整理する時"
       - "テーブル設計の基本方針を決める時"
-    key-concepts:
-      - "業務活動の日時属性を持つ = イベント"
-      - "それ以外 = リソース"
+    core_principle: "業務活動の日時属性を持つ = イベント、それ以外 = リソース"
+    key_concepts:
+      - "リソースとイベントの分類"
+      - "5W1Hによる分析"
+      - "「〜する」テスト"
     
-  event-design:
-    id: "10"
+  - id: "10"
     title: "イベント設計の手引き"
-    when-to-use:
-      - "複数の日時属性を持つテーブルを設計する時"
-      - "イベントの粒度を決定する時"
-    principle: "1イベント = 1日時"
+    category: "entity-design"
+    author: null
+    when_to_use:
+      - "イベント系のテーブルを設計する時"
+      - "複数の日時属性を持つテーブルを扱う時"
+    core_principle: "1イベント = 1日時"
+    key_concepts:
+      - "日時属性の単一性"
+      - "ロングタームイベントパターン"
+      - "イベントの粒度"
     
-  resource-design:
-    id: "11"
+  - id: "11"
     title: "リソース設計の手引き"
-    when-to-use:
+    category: "entity-design"
+    author: null
+    when_to_use:
+      - "リソース系のテーブルを設計する時"
       - "更新日時などの属性を追加したくなった時"
-      - "リソースの変更を管理する必要がある時"
-    concept: "隠れたイベントの抽出"
+    core_principle: "隠れたイベントの抽出"
+    key_concepts:
+      - "更新の背後にあるイベント"
+      - "区分によるサブタイプ化"
+      - "状態とイベントの分離"
     
-  generation-patterns:
-    id: "12"
+  - id: "12"
     title: "世代管理パターンの手引き"
-    when-to-use:
-      - "履歴データの管理方法を決める時"
+    category: "pattern"
+    author: null
+    when_to_use:
+      - "データの履歴や変更管理を検討する時"
       - "過去の状態を参照する必要がある時"
-    patterns:
+    core_principle: "適切なパターンの選択"
+    key_concepts:
       - "シングル世代テーブルパターン"
       - "有効世代ビューパターン"
       - "世代バージョンタグ付けパターン"
     
-  relationship-design:
-    id: "13"
+  - id: "13"
     title: "リレーションシップ設計の手引き"
-    when-to-use:
-      - "テーブル間の関係性を設計する時"
+    category: "relationship-design"
+    author: null
+    when_to_use:
+      - "テーブル間の関連を設計する時"
       - "NULL可能な外部キーが発生しそうな時"
-    solution: "交差エンティティの活用"
+    core_principle: "交差エンティティの活用"
+    key_concepts:
+      - "非依存リレーションシップ"
+      - "NULL回避"
+      - "時系列の整合性"
     
-  sql-antipatterns:
-    id: "15"
+  - id: "15"
     title: "SQLアンチパターン回避ガイドライン"
+    category: "antipattern"
     author: "Bill Karwin"
-    when-to-use:
+    when_to_use:
       - "データベース設計のベストプラクティスを確認する時"
       - "一般的な設計ミスを避けたい時"
+    core_principle: "良かれと思って行う誤った慣習を認識する"
+    key_concepts:
+      - "20のアンチパターン"
+      - "正規化の原則"
+      - "制約の活用"
     
-  logical-antipatterns:
-    id: "16"
+  - id: "16"
     title: "論理設計のアンチパターン"
-    when-to-use:
+    category: "antipattern"
+    author: "Bill Karwin"
+    when_to_use:
+      - "論理的なデータ構造を検討する時"
       - "テーブルの論理設計を行う時"
-      - "データの格納方法を決定する時"
-    antipatterns:
+    core_principle: "データの論理的整合性を保つ"
+    key_concepts:
       - "ジェイウォーク（カンマ区切りリスト）"
       - "ナイーブツリー（階層構造）"
       - "EAV（汎用属性テーブル）"
     
-  physical-antipatterns:
-    id: "17"
+  - id: "17"
     title: "物理設計のアンチパターン"
-    when-to-use:
-      - "テーブルの物理構造を設計する時"
+    category: "antipattern"
+    author: "Bill Karwin"
+    when_to_use:
+      - "物理的なテーブル構造を決める時"
       - "カラムの定義を行う時"
-    antipatterns:
+    core_principle: "物理構造の適切な設計"
+    key_concepts:
       - "マルチカラムアトリビュート"
       - "メタデータトリブル"
+      - "適切な正規化"
     
-  query-antipatterns:
-    id: "18"
+  - id: "18"
     title: "クエリのアンチパターン"
-    when-to-use:
-      - "SQLクエリを作成する時"
+    category: "antipattern"
+    author: "Bill Karwin"
+    when_to_use:
+      - "SQLクエリの設計や最適化を行う時"
       - "パフォーマンス問題を解決する時"
-    antipatterns:
+    core_principle: "効率的なクエリの作成"
+    key_concepts:
       - "フィア・オブ・ジ・アンノウン（NULL恐怖症）"
       - "ランダムセレクション"
       - "プアマンズサーチエンジン"
     
-  application-antipatterns:
-    id: "19"
+  - id: "19"
     title: "アプリケーション開発のアンチパターン"
-    when-to-use:
-      - "アプリケーション層でのDB操作を実装する時"
+    category: "antipattern"
+    author: "Bill Karwin"
+    when_to_use:
+      - "アプリケーションとデータベースの連携を設計する時"
       - "セキュリティを考慮する必要がある時"
-    antipatterns:
-      - "SQLインジェクション"
-      - "リーダブルパスワード"
-      - "マジックビーンズ"
+    core_principle: "アプリケーション層での適切な実装"
+    key_concepts:
+      - "SQLインジェクション対策"
+      - "パスワード管理"
+      - "エラーハンドリング"
 ```
 
 ## 📋 Issue一覧
