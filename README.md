@@ -41,7 +41,8 @@ guidelines:
   - id: "8"
     title: "イミュータブルデータモデル設計ガイドライン"
     category: "design-principle"
-    author: null
+    author: "川島義隆 (kawashima)"
+    tags: ["データベース設計", "イミュータブルデータモデル"]
     when_to_use:
       - "データモデル設計の基本方針を決める時"
       - "データの変更履歴を管理する必要がある時"
@@ -55,7 +56,8 @@ guidelines:
   - id: "9"
     title: "エンティティ分類の手引き"
     category: "entity-design"
-    author: null
+    author: "川島義隆 (kawashima)"
+    tags: ["データベース設計", "イミュータブルデータモデル"]
     when_to_use:
       - "エンティティの種類や役割を整理する時"
       - "テーブル設計の基本方針を決める時"
@@ -68,7 +70,8 @@ guidelines:
   - id: "10"
     title: "イベント設計の手引き"
     category: "entity-design"
-    author: null
+    author: "川島義隆 (kawashima)"
+    tags: ["データベース設計", "イミュータブルデータモデル"]
     when_to_use:
       - "イベント系のテーブルを設計する時"
       - "複数の日時属性を持つテーブルを扱う時"
@@ -81,7 +84,8 @@ guidelines:
   - id: "11"
     title: "リソース設計の手引き"
     category: "entity-design"
-    author: null
+    author: "川島義隆 (kawashima)"
+    tags: ["データベース設計", "イミュータブルデータモデル"]
     when_to_use:
       - "リソース系のテーブルを設計する時"
       - "更新日時などの属性を追加したくなった時"
@@ -94,7 +98,8 @@ guidelines:
   - id: "12"
     title: "世代管理パターンの手引き"
     category: "pattern"
-    author: null
+    author: "川島義隆 (kawashima)"
+    tags: ["データベース設計", "イミュータブルデータモデル"]
     when_to_use:
       - "データの履歴や変更管理を検討する時"
       - "過去の状態を参照する必要がある時"
@@ -107,7 +112,8 @@ guidelines:
   - id: "13"
     title: "リレーションシップ設計の手引き"
     category: "relationship-design"
-    author: null
+    author: "川島義隆 (kawashima)"
+    tags: ["データベース設計", "イミュータブルデータモデル"]
     when_to_use:
       - "テーブル間の関連を設計する時"
       - "NULL可能な外部キーが発生しそうな時"
@@ -121,6 +127,7 @@ guidelines:
     title: "SQLアンチパターン回避ガイドライン"
     category: "antipattern"
     author: "Bill Karwin"
+    tags: ["データベース設計", "SQLアンチパターン"]
     when_to_use:
       - "データベース設計のベストプラクティスを確認する時"
       - "一般的な設計ミスを避けたい時"
@@ -134,6 +141,7 @@ guidelines:
     title: "論理設計のアンチパターン"
     category: "antipattern"
     author: "Bill Karwin"
+    tags: ["データベース設計", "SQLアンチパターン"]
     when_to_use:
       - "論理的なデータ構造を検討する時"
       - "テーブルの論理設計を行う時"
@@ -147,6 +155,7 @@ guidelines:
     title: "物理設計のアンチパターン"
     category: "antipattern"
     author: "Bill Karwin"
+    tags: ["データベース設計", "SQLアンチパターン"]
     when_to_use:
       - "物理的なテーブル構造を決める時"
       - "カラムの定義を行う時"
@@ -160,6 +169,7 @@ guidelines:
     title: "クエリのアンチパターン"
     category: "antipattern"
     author: "Bill Karwin"
+    tags: ["データベース設計", "SQLアンチパターン"]
     when_to_use:
       - "SQLクエリの設計や最適化を行う時"
       - "パフォーマンス問題を解決する時"
@@ -173,6 +183,7 @@ guidelines:
     title: "アプリケーション開発のアンチパターン"
     category: "antipattern"
     author: "Bill Karwin"
+    tags: ["データベース設計", "SQLアンチパターン"]
     when_to_use:
       - "アプリケーションとデータベースの連携を設計する時"
       - "セキュリティを考慮する必要がある時"
@@ -191,7 +202,6 @@ guidelines:
 - [#11 リソース設計の手引き](https://github.com/nakamori-naoya/engineering-guidelines/issues/11) - 隠れたイベントの抽出
 - [#12 世代管理パターンの手引き](https://github.com/nakamori-naoya/engineering-guidelines/issues/12) - 履歴管理の設計パターン
 - [#13 リレーションシップ設計の手引き](https://github.com/nakamori-naoya/engineering-guidelines/issues/13) - 関係性の適切な表現
-- [#14 設計ガイド評価レポート](https://github.com/nakamori-naoya/engineering-guidelines/issues/14) - ガイドラインの品質評価
 - [#15 SQLアンチパターン回避ガイドライン](https://github.com/nakamori-naoya/engineering-guidelines/issues/15) - Bill Karwinの20のアンチパターン
 - [#16 論理設計のアンチパターン](https://github.com/nakamori-naoya/engineering-guidelines/issues/16) - ジェイウォーク、ナイーブツリー、IDリクワイアド、キーレスエントリ、EAV、ポリモーフィック関連
 - [#17 物理設計のアンチパターン](https://github.com/nakamori-naoya/engineering-guidelines/issues/17) - マルチカラムアトリビュート、メタデータトリブル
