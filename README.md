@@ -1,84 +1,65 @@
-# エンジニアリング設計ガイドライン インデックス
+# エンジニアリング設計ガイドライン
 
-エンジニアリング設計に関するガイドラインとその詳細な手引きへのリンク集
+このリポジトリは、エンジニアリング設計に関するガイドラインをGitHub Issuesで管理しています。
 
-## 🏗️ イミュータブルデータモデル設計
+## 📋 ガイドラインの確認方法
 
-### 📘 メインガイドライン
-- [CLAUDE2.md](./CLAUDE2.md) - イミュータブルデータモデル設計ガイドライン
+すべてのガイドラインは[Issues](https://github.com/nakamori-naoya/engineering-guidelines/issues)に整理されています。
 
-### 📚 詳細な手引き
-- [エンティティ分類の手引き](./CLAUDE2-guide-entity-classification.md) `#entity-classification` `#resource` `#event`
-- [イベント設計の手引き](./CLAUDE2-guide-event-design.md) `#event-design` `#single-timestamp` `#long-term-event`
-- [リソース設計の手引き](./CLAUDE2-guide-resource-design.md) `#resource-design` `#hidden-event` `#subtype`
-- [世代管理パターンの手引き](./CLAUDE2-guide-generation-patterns.md) `#generation-pattern` `#version-control` `#history`
-- [リレーションシップ設計の手引き](./CLAUDE2-guide-relationship-design.md) `#relationship` `#foreign-key` `#intersection-entity`
+### 🔍 用途別の検索方法
 
-### 📊 評価レポート
-- [設計ガイド評価レポート](./CLAUDE2-guide-evaluation.md) - ガイドラインの品質評価
+#### 1. 設計手法を学びたい場合
+- ラベル: `イミュータブルデータモデル` を検索
+- [#8 イミュータブルデータモデル設計ガイドライン](https://github.com/nakamori-naoya/engineering-guidelines/issues/8) から開始
 
-## 🚫 SQLアンチパターン
+#### 2. アンチパターンを避けたい場合
+- ラベル: `SQLアンチパターン` を検索
+- [#15 SQLアンチパターン回避ガイドライン](https://github.com/nakamori-naoya/engineering-guidelines/issues/15) から開始
 
-### 📘 メインガイドライン
-- [CLAUDE3.md](./CLAUDE3.md) - Bill Karwin著「SQL Antipatterns」に基づくガイドライン
+#### 3. データベース設計全般
+- ラベル: `データベース設計` を検索
+- すべての設計ガイドラインが表示されます
 
-### 📚 詳細な手引き
-- [論理設計のアンチパターン](./CLAUDE3-guide-logical-antipatterns.md) `#logical-design` `#normalization` `#foreign-key`
-- [物理設計のアンチパターン](./CLAUDE3-guide-physical-antipatterns.md) `#physical-design` `#table-design` `#partitioning`
-- [クエリのアンチパターン](./CLAUDE3-guide-query-antipatterns.md) `#query` `#performance` `#sql-optimization`
-- [アプリケーション開発のアンチパターン](./CLAUDE3-guide-application-antipatterns.md) `#application` `#security` `#error-handling`
+## 🎯 深掘りの方法
 
-## 🔍 タグによる検索
+各メインガイドラインには、詳細な手引きへのリンクが含まれています：
 
-### イミュータブルデータモデル関連
-- `#immutable` - イミュータブルデータモデル全般
-- `#entity-classification` - エンティティ分類
-- `#resource` - リソースエンティティ
-- `#event` - イベントエンティティ
-- `#generation-pattern` - 世代管理パターン
-- `#single-timestamp` - 単一日時属性
-- `#hidden-event` - 隠れたイベント
-- `#relationship` - リレーションシップ設計
+1. **メインIssueを確認** - 概要と基本原則を理解
+2. **「詳細な手引き」セクション** - 深掘りが必要な場合は、リンクされているサブイシューを必ず確認
+3. **具体例とチェックリスト** - 各手引きには実装例とチェックリストが含まれています
 
-### SQLアンチパターン関連
-- `#sql-antipatterns` - SQLアンチパターン全般
-- `#logical-design` - 論理設計
-- `#physical-design` - 物理設計
-- `#query` - クエリ最適化
-- `#application` - アプリケーション開発
-- `#normalization` - 正規化
-- `#foreign-key` - 外部キー
-- `#security` - セキュリティ
-- `#performance` - パフォーマンス
+## 📊 ガイドライン一覧
 
-## 📖 使い方
+### イミュータブルデータモデル設計
+- [#8](https://github.com/nakamori-naoya/engineering-guidelines/issues/8) メインガイドライン
+- [#9](https://github.com/nakamori-naoya/engineering-guidelines/issues/9) エンティティ分類の手引き
+- [#10](https://github.com/nakamori-naoya/engineering-guidelines/issues/10) イベント設計の手引き
+- [#11](https://github.com/nakamori-naoya/engineering-guidelines/issues/11) リソース設計の手引き
+- [#12](https://github.com/nakamori-naoya/engineering-guidelines/issues/12) 世代管理パターンの手引き
+- [#13](https://github.com/nakamori-naoya/engineering-guidelines/issues/13) リレーションシップ設計の手引き
+- [#14](https://github.com/nakamori-naoya/engineering-guidelines/issues/14) 設計ガイド評価レポート
 
-### AIエージェントとして参照する場合
-1. 特定のトピックについて質問された場合、関連するタグで検索
-2. メインガイドライン（CLAUDE2.md, CLAUDE3.md）で概要を確認
-3. 詳細が必要な場合は、対応する手引きファイルを参照
+### SQLアンチパターン回避
+- [#15](https://github.com/nakamori-naoya/engineering-guidelines/issues/15) メインガイドライン（Bill Karwin）
+- [#16](https://github.com/nakamori-naoya/engineering-guidelines/issues/16) 論理設計のアンチパターン
+- [#17](https://github.com/nakamori-naoya/engineering-guidelines/issues/17) 物理設計のアンチパターン
+- [#18](https://github.com/nakamori-naoya/engineering-guidelines/issues/18) クエリのアンチパターン
+- [#19](https://github.com/nakamori-naoya/engineering-guidelines/issues/19) アプリケーション開発のアンチパターン
 
-### 設計で迷った場合
-1. 問題のカテゴリを特定（データモデル or SQL）
-2. 関連する手引きファイルを確認
-3. トラブルシューティングセクションを参照
+## 💡 活用シーン
 
-### 例：「イベントとリソースの違いがわからない」
-→ [エンティティ分類の手引き](./CLAUDE2-guide-entity-classification.md) を参照
+1. **新規設計時** - ガイドラインに従って設計を行う
+2. **コードレビュー時** - チェックリストとして使用
+3. **リファクタリング時** - 改善ポイントの発見
+4. **学習時** - 体系的な知識の習得
 
-### 例：「JOINが多すぎて困っている」
-→ [論理設計のアンチパターン](./CLAUDE3-guide-logical-antipatterns.md) の「ナイーブツリー」セクションを確認
+## 🏷️ ラベル一覧
 
-## 🎯 クイックリファレンス
-
-### イミュータブルデータモデルの核心
-- **UPDATE（更新）がシステムを最も複雑化する**
-- 事実の不変性・単一責任・複雑さの可視化
-
-### SQLアンチパターンの基本原則
-- **良かれと思って行う誤った慣習を認識する**
-- 正規化の原則を尊重・制約の活用・シンプルさの追求
+- `データベース設計` - データベース設計全般
+- `イミュータブルデータモデル` - UPDATE排除の設計手法
+- `SQLアンチパターン` - 避けるべき設計パターン
 
 ---
 
-本インデックスは、エンジニアリング設計の品質向上と、AIエージェントの効率的な情報アクセスを目的として作成されました。
+**注意**: このリポジトリにはファイルは含まれていません。すべての内容はIssuesで管理されています。
+EOF < /dev/null
