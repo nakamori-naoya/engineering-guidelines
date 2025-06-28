@@ -2,6 +2,9 @@
 
 生成AIがデータベース設計で迷った時に参照するガイドライン集。
 
+> **🤖 生成AIへの重要な指示**  
+> このドキュメントを参照する際は、「🤖 AI向け構造化データ」のYAMLセクションを最優先で読み込んでください。YAMLデータには全ガイドラインの構造化された情報（ID、タイトル、使用場面、核心原則、キーワード、リンク）が含まれており、効率的な検索・フィルタリング・分析が可能です。
+
 ## 🤖 参照すべきケース
 
 ### データモデル設計の基本方針を決める時
@@ -43,6 +46,7 @@ guidelines:
     category: "design-principle"
     author: "川島義隆 (kawashima)"
     tags: ["データベース設計", "イミュータブルデータモデル"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/8"
     when_to_use:
       - "データモデル設計の基本方針を決める時"
       - "データの変更履歴を管理する必要がある時"
@@ -58,6 +62,7 @@ guidelines:
     category: "entity-design"
     author: "川島義隆 (kawashima)"
     tags: ["データベース設計", "イミュータブルデータモデル"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/9"
     when_to_use:
       - "エンティティの種類や役割を整理する時"
       - "テーブル設計の基本方針を決める時"
@@ -72,6 +77,7 @@ guidelines:
     category: "entity-design"
     author: "川島義隆 (kawashima)"
     tags: ["データベース設計", "イミュータブルデータモデル"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/10"
     when_to_use:
       - "イベント系のテーブルを設計する時"
       - "複数の日時属性を持つテーブルを扱う時"
@@ -86,6 +92,7 @@ guidelines:
     category: "entity-design"
     author: "川島義隆 (kawashima)"
     tags: ["データベース設計", "イミュータブルデータモデル"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/11"
     when_to_use:
       - "リソース系のテーブルを設計する時"
       - "更新日時などの属性を追加したくなった時"
@@ -100,6 +107,7 @@ guidelines:
     category: "pattern"
     author: "川島義隆 (kawashima)"
     tags: ["データベース設計", "イミュータブルデータモデル"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/12"
     when_to_use:
       - "データの履歴や変更管理を検討する時"
       - "過去の状態を参照する必要がある時"
@@ -114,6 +122,7 @@ guidelines:
     category: "relationship-design"
     author: "川島義隆 (kawashima)"
     tags: ["データベース設計", "イミュータブルデータモデル"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/13"
     when_to_use:
       - "テーブル間の関連を設計する時"
       - "NULL可能な外部キーが発生しそうな時"
@@ -128,6 +137,7 @@ guidelines:
     category: "antipattern"
     author: "Bill Karwin"
     tags: ["データベース設計", "SQLアンチパターン"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/15"
     when_to_use:
       - "データベース設計のベストプラクティスを確認する時"
       - "一般的な設計ミスを避けたい時"
@@ -142,6 +152,7 @@ guidelines:
     category: "antipattern"
     author: "Bill Karwin"
     tags: ["データベース設計", "SQLアンチパターン"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/16"
     when_to_use:
       - "論理的なデータ構造を検討する時"
       - "テーブルの論理設計を行う時"
@@ -156,6 +167,7 @@ guidelines:
     category: "antipattern"
     author: "Bill Karwin"
     tags: ["データベース設計", "SQLアンチパターン"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/17"
     when_to_use:
       - "物理的なテーブル構造を決める時"
       - "カラムの定義を行う時"
@@ -170,6 +182,7 @@ guidelines:
     category: "antipattern"
     author: "Bill Karwin"
     tags: ["データベース設計", "SQLアンチパターン"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/18"
     when_to_use:
       - "SQLクエリの設計や最適化を行う時"
       - "パフォーマンス問題を解決する時"
@@ -184,6 +197,7 @@ guidelines:
     category: "antipattern"
     author: "Bill Karwin"
     tags: ["データベース設計", "SQLアンチパターン"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/19"
     when_to_use:
       - "アプリケーションとデータベースの連携を設計する時"
       - "セキュリティを考慮する必要がある時"
