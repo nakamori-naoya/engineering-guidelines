@@ -40,6 +40,9 @@
 ### 業務知識を構造化して出力するとき
 → [#20 業務知識YAML構造化プロンプト](https://github.com/nakamori-naoya/engineering-guidelines/issues/20)
 
+### 業務知識YAMLに対してコードの準拠度を評価するとき
+→ [#21 業務知識YAML準拠コード評価プロンプト](https://github.com/nakamori-naoya/engineering-guidelines/issues/21)
+
 ## 🤖 AI向け構造化データ
 
 ```yaml
@@ -213,7 +216,7 @@ guidelines:
   - id: "20"
     title: "業務知識YAML構造化プロンプト"
     category: "domain-modeling"
-    author: "中森直哉 (nakamori-naoya)"
+    author: "増田亨"
     tags: ["ドメインモデリング", "業務知識", "生成AI", "プロンプトエンジニアリング"]
     url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/20"
     when_to_use:
@@ -226,6 +229,22 @@ guidelines:
       - "ビジネスルールと例外"
       - "時間的制約"
       - "暗黙知の言語化"
+  
+  - id: "21"
+    title: "業務知識YAML準拠コード評価プロンプト"
+    category: "domain-modeling"
+    author: "増田亨"
+    tags: ["ドメインモデリング", "業務知識", "生成AI", "プロンプトエンジニアリング", "テスト駆動開発"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/21"
+    when_to_use:
+      - "業務知識YAMLに対してコードの準拠度を評価するとき"
+      - "実装が業務ルールを正しく反映しているか検証するとき"
+      - "テストコードの網羅性を確認するとき"
+    core_principle: "業務知識の実装品質を徹底的に評価"
+    key_concepts:
+      - "制約条件の実装評価"
+      - "テストカバレッジ分析"
+      - "具体的な改善提案"
 ```
 
 ## 📋 Issue一覧
@@ -242,6 +261,7 @@ guidelines:
 - [#18 クエリのアンチパターン](https://github.com/nakamori-naoya/engineering-guidelines/issues/18) - フィア・オブ・ジ・アンノウン、アンビギュアスグループ、ランダムセレクション、プアマンズサーチエンジン
 - [#19 アプリケーション開発のアンチパターン](https://github.com/nakamori-naoya/engineering-guidelines/issues/19) - スパゲッティクエリ、インプリシットカラム、リーダブルパスワード、SQLインジェクション、シュードキー・ニートフリーク、シー・ノー・エビル、ディプロマティック・イミュニティ、マジックビーンズ
 - [#20 業務知識YAML構造化プロンプト](https://github.com/nakamori-naoya/engineering-guidelines/issues/20) - 業務知識を生成AIが理解しやすい形式で構造化
+- [#21 業務知識YAML準拠コード評価プロンプト](https://github.com/nakamori-naoya/engineering-guidelines/issues/21) - 実装コードとテストコードの業務知識準拠度を徹底評価
 
 ---
 
