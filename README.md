@@ -37,6 +37,9 @@
 ### アプリケーションとデータベースの連携を設計する時
 → [#19 アプリケーション開発のアンチパターン](https://github.com/nakamori-naoya/engineering-guidelines/issues/19)
 
+### 業務知識を構造化して出力するとき
+→ [#20 業務知識YAML構造化プロンプト](https://github.com/nakamori-naoya/engineering-guidelines/issues/20)
+
 ## 🤖 AI向け構造化データ
 
 ```yaml
@@ -206,6 +209,23 @@ guidelines:
       - "SQLインジェクション対策"
       - "パスワード管理"
       - "エラーハンドリング"
+  
+  - id: "20"
+    title: "業務知識YAML構造化プロンプト"
+    category: "domain-modeling"
+    author: "中森直哉 (nakamori-naoya)"
+    tags: ["ドメインモデリング", "業務知識", "生成AI", "プロンプトエンジニアリング"]
+    url: "https://github.com/nakamori-naoya/engineering-guidelines/issues/20"
+    when_to_use:
+      - "業務知識を生成AIに構造化して伝える時"
+      - "ドメイン知識を体系的に整理する時"
+      - "暗黙知を形式知化する時"
+    core_principle: "業務の制約・ルール・状態変化を構造化"
+    key_concepts:
+      - "不変条件と制約"
+      - "ビジネスルールと例外"
+      - "時間的制約"
+      - "暗黙知の言語化"
 ```
 
 ## 📋 Issue一覧
@@ -221,6 +241,7 @@ guidelines:
 - [#17 物理設計のアンチパターン](https://github.com/nakamori-naoya/engineering-guidelines/issues/17) - マルチカラムアトリビュート、メタデータトリブル
 - [#18 クエリのアンチパターン](https://github.com/nakamori-naoya/engineering-guidelines/issues/18) - フィア・オブ・ジ・アンノウン、アンビギュアスグループ、ランダムセレクション、プアマンズサーチエンジン
 - [#19 アプリケーション開発のアンチパターン](https://github.com/nakamori-naoya/engineering-guidelines/issues/19) - スパゲッティクエリ、インプリシットカラム、リーダブルパスワード、SQLインジェクション、シュードキー・ニートフリーク、シー・ノー・エビル、ディプロマティック・イミュニティ、マジックビーンズ
+- [#20 業務知識YAML構造化プロンプト](https://github.com/nakamori-naoya/engineering-guidelines/issues/20) - 業務知識を生成AIが理解しやすい形式で構造化
 
 ---
 
